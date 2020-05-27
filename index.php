@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
 
@@ -29,13 +30,13 @@
         </ol>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="https://source.unsplash.com/2400x700/?apple,code" class="d-block w-100" alt="...">
+                <img src="img/slider-1.jpg" class="d-block w-100" alt="...">
             </div>
             <div class="carousel-item">
-                <img src="https://source.unsplash.com/2400x700/?progranners,microsoft" class="d-block w-100" alt="...">
+                <img src="img/slider-2.jpg" class="d-block w-100" alt="...">
             </div>
             <div class="carousel-item">
-                <img src="https://source.unsplash.com/2400x700/?coding,apple" class="d-block w-100" alt="...">
+                <img src="img/slider-3.jpg" class="d-block w-100" alt="...">
             </div>
         </div>
         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -56,10 +57,10 @@
             <?php 
             $sql = "SELECT * FROM `categories`";
             $result = mysqli_query($conn, $sql);
-
             while($row = mysqli_fetch_assoc($result)){
                 // echo $row['category_id'];
                 // echo $row['category_name'];
+                $id = $row['category_id'];
                 $cat = $row['category_name'];
                 $desc = $row['category_description'];
 
@@ -68,9 +69,9 @@
                     <div class="card" style="width: 18rem;">
                         <img src="https://source.unsplash.com/500x400/?' . $cat . ',coding" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title">' . $cat . ',</h5>
+                            <h5 class="card-title"><a href = "threads.php?catid= ' . $id . '">' . $cat . '</a></h5>
                             <p class="card-text">' . substr($desc,0, 90) . '...</p>
-                            <a href="#" class="btn btn-primary">View Threads</a>
+                            <a href="threads.php?catid= ' . $id . '" class="btn btn-primary">View Threads</a>
                         </div>
                     </div>
                 </div>';
