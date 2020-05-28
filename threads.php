@@ -40,67 +40,35 @@
                 Do not cross post questions.
                 Remain respectful of other members at all times.
             </p>
-            <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+            <a class="btn btn-success btn-lg" href="#" role="button">Learn more</a>
         </div>
     </div>
 
     <div class="container">
         <h1 class="py-2">Browse Questions</h1>
-        <div class="media my-3">
+        <?php
+        $id = $_GET['catid'];
+      $sql = "SELECT * FROM `threads` WHERE thread_cat_id=$id";
+      $result = mysqli_query($conn, $sql);
+      while($row = mysqli_fetch_assoc($result)){
+          $id = $row['thread_id'];
+          $title = $row['thread_title'];
+          $desc = $row['thread_desc'];
+
+
+
+        echo '<div class="media my-3">
             <img src="img/userdefault.webp" width="54px" class="mr-3" alt="...">
             <div class="media-body">
-                <h5 class="mt-0">Unable to install postgress sql on windows</h5>
-                Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus
-                odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate
-                fringilla. Donec lacinia congue felis in faucibus.
+                <h5 class="mt-0"><a class="text-dark" href="thread.php">'. $title .'</a></h5>
+                '.$desc.'
             </div>
-        </div>
-        <div class="media my-3">
-            <img src="img/userdefault.webp" width="54px" class="mr-3" alt="...">
-            <div class="media-body">
-                <h5 class="mt-0">Unable to install postgress sql on windows</h5>
-                Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus
-                odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate
-                fringilla. Donec lacinia congue felis in faucibus.
-            </div>
-        </div>
-        <div class="media my-3">
-            <img src="img/userdefault.webp" width="54px" class="mr-3" alt="...">
-            <div class="media-body">
-                <h5 class="mt-0">Unable to install postgress sql on windows</h5>
-                Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus
-                odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate
-                fringilla. Donec lacinia congue felis in faucibus.
-            </div>
-        </div>
-        <div class="media my-3">
-            <img src="img/userdefault.webp" width="54px" class="mr-3" alt="...">
-            <div class="media-body">
-                <h5 class="mt-0">Unable to install postgress sql on windows</h5>
-                Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus
-                odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate
-                fringilla. Donec lacinia congue felis in faucibus.
-            </div>
-        </div>
-        <div class="media my-3">
-            <img src="img/userdefault.webp" width="54px" class="mr-3" alt="...">
-            <div class="media-body">
-                <h5 class="mt-0">Unable to install postgress sql on windows</h5>
-                Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus
-                odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate
-                fringilla. Donec lacinia congue felis in faucibus.
-            </div>
-        </div>
-        <div class="media my-3">
-            <img src="img/userdefault.webp" width="54px" class="mr-3" alt="...">
-            <div class="media-body">
-                <h5 class="mt-0">Unable to install postgress sql on windows</h5>
-                Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus
-                odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate
-                fringilla. Donec lacinia congue felis in faucibus.
-            </div>
-        </div>
-    </div>
+        </div>';
+    }
+
+    ?>
+        
+    
 
     <?php include 'partials/_footer.php'; ?>
     <!-- Optional JavaScript -->
