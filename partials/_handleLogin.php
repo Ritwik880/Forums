@@ -1,7 +1,7 @@
 <?php
 $showError = "false";
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    include './_dbconnect.php';
+    include '../_dbconnect.php';
     $email = $_POST['loginEmail'];
     $pass = $_POST['loginPass'];
 
@@ -17,6 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION['useremail'] = $email;
             echo "logged in" . $email;
         }
-        header("Location: /Forum/index.php");
+        header("Location: /Forums/index.php");
     }
 }
+?>

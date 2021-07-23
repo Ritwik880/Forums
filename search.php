@@ -11,10 +11,7 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
             integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
         <style>
-        #maincontainer {
-            min-height: 100vh;
-
-        }
+        #maincontainer {min-height: 100vh;}
         </style>
         <title>Forums</title>
 </head>
