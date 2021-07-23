@@ -9,15 +9,14 @@
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
         <style>
-            #ques {
-                min-height: 433px;
-            }
+            #ques{min-height: 433px;}
         </style>
 
         <title>Forums</title>
 </head>
 
 <body>
+    <?php include './css/style.php'; ?>
     <?php include 'partials/_dbconnect.php'; ?>
     <?php include 'partials/_header.php'; ?>
 
@@ -35,7 +34,6 @@
         $result2 = mysqli_query($conn, $sql2);
         $row2 = mysqli_fetch_assoc($result2);
         $posted_by = $row2['user_email'];
-
     }
     ?>
 
@@ -71,7 +69,7 @@
                 Do not cross post questions.
                 Remain respectful of other members at all times.
             </p>
-            <p>Posted by: <b><?php echo $posted_by;?></b></p>
+            <p>Posted by: <b><?php echo $posted_by; ?></b></p>
         </div>
     </div>
     <?php
@@ -123,7 +121,7 @@
             echo '<div class="media my-3">
             <img src="img/userdefault.webp" width="54px" class="mr-3" alt="...">
             <div class="media-body">
-            <p class="font-weight-bold my-0">'.$row2['user_email'].'at ' . $comment_time . ' </p>
+            <p class="font-weight-bold my-0">' . $row2['user_email'] . 'at ' . $comment_time . ' </p>
                
                 ' . $content . '
             </div>
