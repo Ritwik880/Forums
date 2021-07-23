@@ -19,7 +19,7 @@
 </head>
 
 <body>
-    <?php include 'partials/_dbconnect.php'; ?>
+    <?php include './_dbconnect.php'; ?>
 
     <?php include 'partials/_header.php'; ?>
     

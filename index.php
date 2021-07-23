@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="en">
 
@@ -9,11 +8,14 @@
 
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
         <title>Forums</title>
 </head>
 
 <body>
-    <?php include 'partials/_dbconnect.php'; ?>
+    <?php include './css/style.php'; ?>
+
+    <?php include './_dbconnect.php'; ?>
     <?php include 'partials/_header.php'; ?>
 
 
@@ -24,18 +26,16 @@
         <ol class="carousel-indicators">
             <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
             <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+
         </ol>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="img/slider-1.jpg" class="d-block w-100" alt="...">
+                <img src="https://source.unsplash.com/1600x900/?Gaming" class="d-block w-100">
             </div>
             <div class="carousel-item">
-                <img src="img/slider-2.jpg" class="d-block w-100" alt="...">
+                <img src="https://source.unsplash.com/1600x900/?Programming" class="d-block w-100">
             </div>
-            <div class="carousel-item">
-                <img src="img/slider-3.jpg" class="d-block w-100" alt="...">
-            </div>
+
         </div>
         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -63,7 +63,7 @@
                 $desc = $row['category_description'];
 
                 echo
-                    '<div class="col-md-4">
+                '<div class="col-md-4">
                     <div class="card" style="width: 18rem;">
                         <img src="https://source.unsplash.com/500x400/?' . $cat . ',coding" class="card-img-top" alt="...">
                         <div class="card-body">
