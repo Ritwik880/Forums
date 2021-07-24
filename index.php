@@ -14,7 +14,6 @@
 
 <body>
     <?php include './css/style.php'; ?>
-
     <?php include './_dbconnect.php'; ?>
     <?php include 'partials/_header.php'; ?>
 
@@ -90,4 +89,4 @@
     </script>
 </body>
 
-</html
+</html>

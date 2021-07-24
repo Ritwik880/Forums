@@ -89,13 +89,9 @@
         <h1 class="py-2">Start a Discussion</h1>
         <p class="lead">You are not logged in. Please login to be able to start a discussion</p>
     </div>
-        
         ';
     }
-
     ?>
-
-
     </div>
     <div class="container mb-5" id="ques">
         <h1 class="py-2">Browse Questions</h1>
@@ -154,4 +150,4 @@
         </script>
 </body>
 
-</html
+</html>
